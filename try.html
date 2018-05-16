@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=devide.width" intial scale="1.0">
+<title>Questions</title>
+<style>
+body
+{
+generic family: Serif, Times New Roman;
+color:black;
+font-size:20px;
+background-color: "#ffffee";
+background-repeat: no-repeat;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SbuMT1C4D-K9UDa08gXKM92S9zWwCCEIkkQH5wQQdvBa8AN2");
+background-size: cover;
+ overflow: auto;
+}
+#a{
+padding-left: 20px;
+}
+
+button
+    {   background: white;
+        cursor: pointer;
+        border-radius: 10px;
+        color: darkgray;
+        border-color: brown;
+        border-style: solid;
+        padding: 10px 15px;
+        align-content: center;
+        margin-right: 30px;
+        color: black;
+
+    }
+    button:hover{
+      background: #D3D3D3;
+    }
+
+div
+    {
+        position: sticky;
+        bottom: 10px;
+        color: black;
+        text-align: left;
+    }
+
+    input
+    {
+        margin-left: 20px;
+    }
+li{
+
+  display: inline;
+  position: sticky;
+  z-index: 1;
+
+}
+ul{
+   bottom: 0px;
+  text-align: center;
+}
+
+
+hr{
+color: #808080;
+}
+
+#ans{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#op{
+  font-size: 35px;
+}
+
+
+p.b{
+position: sticky;
+z-index: 1;
+font-size: 40px;
+width: 150px;
+height: 50px;
+margin-left:1100px;
+border-radius: 12px;
+text-align: center;
+top: 0px;
+color: white;
+background-color:#008000;
+display: inline-block;
+}
+
+#tabledisplay{
+  top: 60px;
+align-content: center;
+left:60px;
+display: none;
+
+}
+table{
+  width: 100%;
+  cellpadding:10px;
+  border: 1px solid black ;
+  margin-bottom: 500px;
+}
+td{
+  border: 1px solid black;
+  padding: 5px;
+}
+#score{
+  color: #900C3F;
+  padding-left: 50px;
+}
+@media screen and (min-width :1099){
+  #time{
+      margin-left: 50px;
+  }
+}
+
+@media screen and (max-width :1365px) {
+  div {font-size:20px;
+}
+#time{
+  margin-left: 100px;
+}
+#q1{
+  padding-top: 50px;
+}
+#ans{
+  padding-top: 100px;
+}
+
+}
+@media screen and (max-width:328px) {
+  #q1{
+    padding-top: 250px;
+}
+  #ans{
+    padding-top: 250px;
+  }
+}
+
+
+
+</style>
+</head>
+
+<body >
+
+  <div id="a">
+<p class="b"  id="time" ></p>
+
+  <p  id="score" ></p>
+
+<h3 style="text-align:left " id="s" >QUESTION NUMBER: <span id="num"> </span><i  style="font-size:24px"></i><hr></h3>
+<div id="mydiv">
+<h2 id="q1"></h2>
+<hr>
+
+
+         <div id="ans">
+        <input type="radio" name="option" value="1" onchange="correctanswer(this.checked ,1)"/><span id="option1"  style="padding-top:30px ; font-size: 25px; " ></span>
+        <br>
+        <br>
+        <input type="radio" name="option" value="2" onchange="correctanswer(this.checked ,2)"style="padding-top:30px"/><span id="option2"  style="padding-top:30px ; font-size: 25px; " ></span>
+         <br>
+        <br>
+        <input type="radio" name="option" value="3" onchange="correctanswer(this.checked ,3)"style="padding-top:30px" /><span id="option3"  style="padding-top:30px ; font-size: 25px; " ></span>
+        <br>
+        <br>
+        <input type="radio" name="option" value="4" onchange="correctanswer(this.checked ,4)"style="padding-top:30px"/><span id="option4"  style="padding-top:30px ; font-size: 25px; " ></span>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+<div id="tabledisplay">
+<table>
+<tr>
+ <td> <button onclick="qnum(1)">1</button></td>
+<td> <button onclick="qnum(2)">2</button></td>
+<td> <button onclick="qnum(3)">3</button></td>
+<td> <button onclick="qnum(4)">4</button></td>
+<td> <button onclick="qnum(5)">5</button></td>
+</tr>
+<tr>
+ <td> <button onclick="qnum(6)">6</button></td>
+<td> <button onclick="qnum(7)">7</button></td>
+<td> <button onclick="qnum(8)">8</button></td>
+<td> <button onclick="qnum(9)">9</button></td>
+<td> <button onclick="qnum(10)">10</button></td>
+</tr>
+
+</table>
+</div>
+   <div id="op">
+        <ul style="list-style-type: none ">
+    <li > <button id="prev" onclick="prevques()">Previous</button></li>
+    <li > <button id="next" onclick="nextques()">Next</button></li>
+    <li><button id="tryagain" onclick="again()" >Try Again</button></li>
+    <li><button id="checkans" onclick="finalanswer()" >Check Answer</button></li>
+    <li><button id="questiondis" onclick="tableCreate()">Questions</button></li>
+    <li><button id="submit" onclick="submitbutton() ">Submit Test</button></li>
+    </ul>
+    </div>
+
+<script type="text/javascript"  src="try.js"> </script>
+</body>
+</html>
